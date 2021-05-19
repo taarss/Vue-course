@@ -7,13 +7,17 @@
             <friend-contact 
                 name="Manuel Lorenz" 
                 phone-number="12341234" 
-                email-address="1234@123.123">
+                email-address="1234@123.123"
+                isFavorite="0"
+                >
             </friend-contact>
             <friend-contact
                 name="Samuel Lorenz" 
                 phone-number="12341234" 
-                email-address="1234@123.123">
-
+                email-address="1234@123.123"
+                isFavorite="1"
+                >
+                
             </friend-contact>
         </ul>
     </section>
@@ -30,13 +34,15 @@ export default {
                     id: 'manuel',
                     name: 'Manuel Lorenz',
                     phone: '12341234',
-                    email: '123@123.123'
+                    email: '123@123.123',
+                    isFavorite: '0'
                 },
                 {
                     id: 'julie',
                     name: 'Julie Lorenz',
                     phone: '12341234',
-                    email: '123@123.123'
+                    email: '123@123.123',
+                    isFavorite: '1'
                 }
             ]
         };
