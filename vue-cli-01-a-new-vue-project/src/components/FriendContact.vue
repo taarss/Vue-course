@@ -1,4 +1,5 @@
 <template>
+<section>
     <li>
         <h2>{{ this.name }} {{ this.isFavorite === true ? 'Favorite' : ''  }}</h2>
         <button @click="toggleDetails()" >{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
@@ -7,7 +8,9 @@
             <li><strong>Phone:</strong>{{ this.phoneNumber }}</li>
             <li><strong>Email:</strong>{{ this.emailAddress }}</li>
         </ul>
+        <button @click="deleteFriend()">Delete</button>
     </li>
+</section>
 </template>
 <script>
 export default {
@@ -34,6 +37,16 @@ export default {
             default: false,
         }
     },
+    emits: {
+        'toggle-favorite': function(id) {
+            if(id){
+                return true;
+            } else{
+                console.warn("id is missing");
+                return false;
+            }
+        }
+    },
     data(){
         return{
             detailsAreVisible: false,
@@ -51,6 +64,9 @@ export default {
         },
         toggleFavorite(){
             this.$emit('toggle-favorite', this.id);
+        },
+        deleteFriend(){
+            this.$emit('delete-friend', this.id);
         }
     }
 }
