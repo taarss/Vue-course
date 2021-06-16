@@ -1,9 +1,9 @@
 <template>
-<button @click="confirmInput()">Confirm</button>
-<button @click="saveChanges()">Save changes</button>
-  <ul>
-    <user-item v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role"></user-item>
-  </ul>
+  <button @click="confirmInput()">Confirm</button>
+  <button @click="saveChanges()">Save changes</button>
+    <ul>
+      <user-item v-for="user in users" :key="user.id" :name="user.fullName" :role="user.role"></user-item>
+    </ul>
 </template>
 
 <script>
