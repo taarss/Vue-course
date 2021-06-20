@@ -3,8 +3,7 @@
     <the-counter></the-counter>
     <favorite-value></favorite-value>
     <button @click="addOne">Add 1</button>
-        <Change-Counter></Change-Counter>
-
+    <Change-Counter></Change-Counter>
   </base-container>
   <base-container title="Auth">
     <user-auth></user-auth>
@@ -23,20 +22,20 @@ export default {
     TheCounter,
     ChangeCounter,
     FavoriteValue,
-    UserAuth
+    UserAuth,
   },
   computed: {
-        isAuth() {
-            return this.$store.getters.userIsAuthenticated;
-        }
+    isAuth() {
+      return this.$store.getters.userIsAuthenticated;
+    },
   },
   methods: {
-    addOne(){
+    addOne() {
       this.$store.dispatch({
         type: 'numbers/increase',
-        value: 10
+        value: 10,
       });
-    }
+    },
   }
 };
 </script>

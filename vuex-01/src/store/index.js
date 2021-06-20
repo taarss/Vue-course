@@ -9,7 +9,10 @@ const store = createStore({
     },
     state(){
         return {
-            isLoggedIn: false
+            isLoggedIn: false,
+            userId: null,
+            token: null,
+            tokenExpiration: null
         }
     },
     mutations: rootMutations,
